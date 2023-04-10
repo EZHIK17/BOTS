@@ -2,13 +2,19 @@ HELP = "help - о программе. show - список городов. msk - 
 
 run = True
 
+var = 'Москва, Санкт-Петербург'
+
 while run:
     command = input('Команда:')
     if command == 'help':
         print(HELP)
     elif command == 'show':
-        print('Москва,Санкт-Петербург')
+        print(var)
+        gor = input('Выбери город ')
+        if gor == 'msk':
+            print('Москва')
+        elif gor == 'spb':
+            print('Санкт-Петербург')
     else:
-        print('Такого города нет')
+        print('Такого города нет ')
         break
-print('Пока')
